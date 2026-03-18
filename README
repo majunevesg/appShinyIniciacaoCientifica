@@ -1,1 +1,38 @@
-Este projeto foi concluido no meu segundo ano de iniciação cientifica
+# Desenvolvimento de Aplicativos em Shiny: Estatística na Pesquisa em Saúde
+
+[cite_start]Este repositório contém o projeto de **Iniciação Científica** desenvolvido na **Universidade Federal de Juiz de Fora**[cite: 1, 5, 43]. [cite_start]O objetivo principal foi criar uma ferramenta acessível para pesquisadores da saúde utilizarem a **Regressão Logística** sem a necessidade de domínio direto de programação em R[cite: 14, 15].
+
+## 📊 Sobre o Projeto
+
+[cite_start]O aplicativo foi construído utilizando o framework **Shiny**[cite: 14]. [cite_start]Ele oferece uma alternativa gratuita e intuitiva a softwares proprietários, permitindo a análise de desfechos binários (como óbito/não óbito ou doença/não doença), comuns em estudos epidemiológicos transversais[cite: 9, 10, 15].
+
+### Funcionalidades Principais
+* [cite_start]**Interface Amigável:** Estruturada em abas para facilitar a navegação (Sobre, Seleção do Arquivo, Ajuste do Modelo e Diagnóstico)[cite: 14, 26, 32].
+* [cite_start]**Upload de Dados:** Suporte para arquivos no formato `.csv`[cite: 52].
+* [cite_start]**Ajuste Dinâmico:** Permite ajustar o modelo de regressão e remover variáveis não significativas interativamente[cite: 97, 98].
+* [cite_start]**Razão de Chances (Odds Ratio):** Cálculo automático para interpretação epidemiológica dos riscos[cite: 13, 24, 99].
+* [cite_start]**Análise de Diagnóstico:** Gráficos de resíduos, pontos de alavanca e distância de Cook para validação do modelo[cite: 119].
+
+## 🔬 Fundamentos Estatísticos
+
+[cite_start]O modelo assume que a variável dependente $Y_{i}$ segue uma distribuição $Bernoulli(\pi_{i})$[cite: 17]. 
+A função logística utilizada é expressa por:
+
+[cite_start]$$logit(\pi_{i}) = \beta_{1}x_{1} + \beta_{2}x_{2} + \dots + \beta_{p}x_{p}$$ [cite: 21]
+
+[cite_start]Os parâmetros são estimados através do **método da máxima verossimilhança**[cite: 23].
+
+## 🛠️ Tecnologias Utilizadas
+
+* [cite_start]**R** e **Shiny** (ui, server, shinyApp)[cite: 14, 26].
+* [cite_start]**GGally** para visualizações de diagnóstico[cite: 119].
+* [cite_start]**Base de Dados de Exemplo:** Pima Indians Diabetes (Kaggle)[cite: 33].
+
+## 🎓 Autoria
+
+* [cite_start]**Desenvolvedora:** Maria Júlia Neves Gregório[cite: 2, 49].
+* [cite_start]**Orientador:** Tiago Maia Magalhães[cite: 51].
+* [cite_start]**Instituição:** UFJF (2020)[cite: 1, 5].
+
+---
+[cite_start]*Este projeto foi desenvolvido com o intuito de contribuir para a democratização das análises estatísticas no setor da saúde[cite: 128].*
