@@ -1,38 +1,42 @@
 # Desenvolvimento de Aplicativos em Shiny: Estatística na Pesquisa em Saúde
 
-[cite_start]Este repositório contém o projeto de **Iniciação Científica** desenvolvido na **Universidade Federal de Juiz de Fora**[cite: 1, 5, 43]. [cite_start]O objetivo principal foi criar uma ferramenta acessível para pesquisadores da saúde utilizarem a **Regressão Logística** sem a necessidade de domínio direto de programação em R[cite: 14, 15].
+Este repositório contém o código desenvolvido durante o projeto de Iniciação Científica (IC) na Universidade Federal de Juiz de Fora. O objetivo principal foi implementar técnicas de Bioestatística, especificamente a Regressão Logística, em uma interface amigável e acessível para pesquisadores da área da saúde que não possuem domínio de programação.
+
+---
 
 ## 📊 Sobre o Projeto
 
-[cite_start]O aplicativo foi construído utilizando o framework **Shiny**[cite: 14]. [cite_start]Ele oferece uma alternativa gratuita e intuitiva a softwares proprietários, permitindo a análise de desfechos binários (como óbito/não óbito ou doença/não doença), comuns em estudos epidemiológicos transversais[cite: 9, 10, 15].
+O aplicativo foi construído utilizando o pacote **Shiny** do software R, permitindo a criação de uma ferramenta interativa e gratuita (em contraste com softwares proprietários como o SPSS) para análise de desfechos binários.
 
-### Funcionalidades Principais
-* [cite_start]**Interface Amigável:** Estruturada em abas para facilitar a navegação (Sobre, Seleção do Arquivo, Ajuste do Modelo e Diagnóstico)[cite: 14, 26, 32].
-* [cite_start]**Upload de Dados:** Suporte para arquivos no formato `.csv`[cite: 52].
-* [cite_start]**Ajuste Dinâmico:** Permite ajustar o modelo de regressão e remover variáveis não significativas interativamente[cite: 97, 98].
-* [cite_start]**Razão de Chances (Odds Ratio):** Cálculo automático para interpretação epidemiológica dos riscos[cite: 13, 24, 99].
-* [cite_start]**Análise de Diagnóstico:** Gráficos de resíduos, pontos de alavanca e distância de Cook para validação do modelo[cite: 119].
+### Principais Funcionalidades
 
-## 🔬 Fundamentos Estatísticos
+- **Seleção de Arquivo:** Upload de bancos de dados personalizados no formato `.csv`.
+- **Ajuste de Modelo:** Implementação de Regressão Logística com estimativa por Máxima Verossimilhança.
+- **Seleção de Variáveis:** Interface interativa para remover variáveis não significativas e refinar o modelo.
+- **Razão de Chances (Odds Ratio):** Cálculo e interpretação direta das chances de ocorrência do evento de interesse.
+- **Análise de Diagnóstico:** Visualização de resíduos, pontos de alavanca e Distância de Cook através do pacote **GGally**.
 
-[cite_start]O modelo assume que a variável dependente $Y_{i}$ segue uma distribuição $Bernoulli(\pi_{i})$[cite: 17]. 
-A função logística utilizada é expressa por:
-
-[cite_start]$$logit(\pi_{i}) = \beta_{1}x_{1} + \beta_{2}x_{2} + \dots + \beta_{p}x_{p}$$ [cite: 21]
-
-[cite_start]Os parâmetros são estimados através do **método da máxima verossimilhança**[cite: 23].
+---
 
 ## 🛠️ Tecnologias Utilizadas
 
-* [cite_start]**R** e **Shiny** (ui, server, shinyApp)[cite: 14, 26].
-* [cite_start]**GGally** para visualizações de diagnóstico[cite: 119].
-* [cite_start]**Base de Dados de Exemplo:** Pima Indians Diabetes (Kaggle)[cite: 33].
-
-## 🎓 Autoria
-
-* [cite_start]**Desenvolvedora:** Maria Júlia Neves Gregório[cite: 2, 49].
-* [cite_start]**Orientador:** Tiago Maia Magalhães[cite: 51].
-* [cite_start]**Instituição:** UFJF (2020)[cite: 1, 5].
+- **Linguagem:** R  
+- **Framework:** Shiny (`ui`, `server` e `shinyApp`)  
+- **Visualização de Dados:** GGally  
+- **Modelo Estatístico:** Regressão Logística (Distribuição de Bernoulli)  
 
 ---
-[cite_start]*Este projeto foi desenvolvido com o intuito de contribuir para a democratização das análises estatísticas no setor da saúde[cite: 128].*
+
+## 📖 Exemplo de Uso (Pima Indians Diabetes)
+
+Para demonstração, o projeto utiliza o banco de dados **Pima Indians Diabetes** (Kaggle), cujo objetivo é prever a ocorrência de diabetes em mulheres com base em variáveis como Glicose, IMC (BMI) e Idade.
+
+No exemplo documentado, observou-se que variáveis como o nível de **Glicose** apresentam associação positiva com a probabilidade de ocorrência de Diabetes.
+
+---
+
+## 🎓 Créditos
+
+- **Desenvolvedora:** Maria Júlia Neves Gregório  
+- **Orientador:** Tiago Maia Magalhães  
+- **Instituição:** Universidade Federal de Juiz de Fora (UFJF)
